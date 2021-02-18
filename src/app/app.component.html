@@ -1,0 +1,12 @@
+<div class="p-4">
+  <div class="heading  mb-2"> SpaceX Launch Programs </div>
+  <div class="row  flex-wrap filter"> 
+    <div class="col-lg-3 col-xl-2 col-md-3 col-sm-12 px-0 side mb-4">
+      <app-filter-component ></app-filter-component>
+    </div>
+    <div class="col-lg-9  col-xl-10col-md-9  col-sm-12 scroll-body p=0">
+  <app-program-listing ></app-program-listing>
+    </div>
+  </div>
+</div>
+<ng-http-loader  [backgroundColor]="'#FF860D'" [debounceDelay]="100"></ng-http-loader>

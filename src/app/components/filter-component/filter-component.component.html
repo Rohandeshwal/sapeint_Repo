@@ -1,0 +1,56 @@
+<div class="filter-container">
+    <div class="ft-fluid">
+        <div class="Filter">
+            <p class="font-weight-bold filtertext">Filters</p>
+
+            <div class="">
+                <p class="launch">launch year</p>
+                <hr class="App-filters-hr" />
+            </div>
+            <div class="row mt-2">
+                <div class="col-6" *ngFor="let year of years">
+                    <!-- App-filter-button-container -->
+                    <button type="button" [ngClass]="{
+              element_select: year === spaceLaunchFilters.launchYear
+            }" class="app-filter-button btn btn-outline-success" (click)="applyFilter('year', year)">
+            {{ year }}
+          </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="launchContainer pt-2">
+            <p class="launch">Successful launch</p>
+            <hr class="App-filters-hr" />
+            <div class="d-flex justify-content-around">
+                <button type="button" [ngClass]="{
+            element_select: true === spaceLaunchFilters.hasSuccessfulLaunch
+          }" class="app-filter-button btn btn-outline-success" (click)="applyFilter('successLaunch', true)">
+          True
+        </button>
+                <button type="button" [ngClass]="{
+            element_select: false === spaceLaunchFilters.hasSuccessfulLaunch
+          }" class="app-filter-button btn btn-outline-success" (click)="applyFilter('successLaunch', false)">
+          False
+        </button>
+            </div>
+        </div>
+
+        <div class="SuccessfullandingConatiner pt-2">
+            <p class="launch">Successful Landing</p>
+            <hr class="App-filters-hr" />
+            <div class="d-flex justify-content-around">
+                <button type="button" [ngClass]="{
+            element_select: true === spaceLaunchFilters.hasSuccessfulLanding
+          }" class="app-filter-button btn btn-outline-success" (click)="applyFilter('successLanding', true)">
+          True
+        </button>
+                <button type="button" [ngClass]="{
+            element_select: false === spaceLaunchFilters.hasSuccessfulLanding
+          }" class="app-filter-button btn btn-outline-success" (click)="applyFilter('successLanding', false)">
+          False
+        </button>
+            </div>
+        </div>
+    </div>
+</div>

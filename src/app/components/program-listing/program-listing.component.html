@@ -1,0 +1,30 @@
+<div class="container">
+  
+    <div class="row mb-2">
+      <!-- {{spaceData | json}} -->
+      <div class=" col-xl-3  col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let data of spaceData">
+        <div class="flip-card colStyle  ">
+          <div class="flip-card-inner card">
+            <div class="flip-card-front">
+                            <img src="{{data.links.mission_patch_small}}" class=" space-mission-image" alt="mission patch img not available on api" width="400" height="200">
+              <div class="card-body">
+                <h5 class="card-title">{{data.mission_name}} # {{data.flight_number}}</h5>
+                <b> Mission ids: </b>
+                <ul class="renderData">
+                  <li> {{data.mission_id}}</li>
+                </ul>
+                <b>Launch Year: </b> <span class="renderData">{{data.launch_year }} </span> <br>
+                <b> Successful Launch: </b> <span class="renderData"> {{data.launch_success}}</span> <br>
+                <b> Successful Landing: </b> <span class="renderData">{{data.rocket.first_stage.cores[0].land_success  }} </span>
+                <!-- first_stage.cores[0].land_success -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  class="d-flex justify-content-center">
+      <p> Developed by: Rohan Deshwal</p>
+    </div>
+    </div>
+
